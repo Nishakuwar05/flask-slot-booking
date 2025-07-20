@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookings</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/table.css">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="../static/togglescript.js"></script>
+   
+  </head>
+  <body>
+     <!-- Menu Button (☰) on the Right Side -->
+   <button class="menu-btn" onclick="toggleDropdown()">&#9776;</button>
+
+   <!-- Dropdown Menu -->
+   <div class="dropdown-menu-custom" id="dropdownMenu">
+    <a href="/subadminprofile">Profile</a>
+    
+    <a href="/">Logout</a>
+      
+   </div>
+<br><br><br><br>
+   <center>
+
+    <h1 style="color: #176d2f;">Sub Admin Pannel -  Approve/Reject Slots</h1>
+      
+    <div class="flashes">
+      {% for message in get_flashed_messages() %}
+      {{ message }}
+      {% endfor %}
+    </div>
+    <div class="table-container">
+     
+      <table id="mytable">
+        
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Registration Number</th>
+            <th>Date</th>
+            <th>Gender</th>
+            <th>Class</th>
+            <th>Action 1</th>
+            <th>Action 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for r in res %}
+          <tr>
+            <td>{{ r[7] }}</td>
+            <td>{{ r[8] }}</td>
+            <td>{{ r[1] }}</td>
+            <td>{{ r[2] }}</td>
+            <td>{{ r[3] }}</td>
+            {% if r[4]=="Pending"%}
+            <td>
+              <a href="accept2?id={{r[0]}}" class="linkbtn">Accept</a>
+            </td>
+            <td>
+                <a href="reject2?id={{r[0]}}" class="linkbtn">Reject</a>
+              </td>
+              {%else%}
+              <td>
+                {{r[4]}}
+              </td>
+              <td>
+                {{r[4]}}
+              </td>
+              {%endif%}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </center>
+    
+  
+   
+
+   
+  </body>
+</html>

@@ -1,0 +1,430 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "mysql.connector",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "Error",
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "isExtraImport": true,
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "Markup",
+        "importPath": "markupsafe",
+        "description": "markupsafe",
+        "isExtraImport": true,
+        "detail": "markupsafe",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "mailing",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mailing",
+        "description": "mailing",
+        "detail": "mailing",
+        "documentation": {}
+    },
+    {
+        "label": "smtplib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "smtplib",
+        "description": "smtplib",
+        "detail": "smtplib",
+        "documentation": {}
+    },
+    {
+        "label": "MIMEMultipart",
+        "importPath": "email.mime.multipart",
+        "description": "email.mime.multipart",
+        "isExtraImport": true,
+        "detail": "email.mime.multipart",
+        "documentation": {}
+    },
+    {
+        "label": "MIMEText",
+        "importPath": "email.mime.text",
+        "description": "email.mime.text",
+        "isExtraImport": true,
+        "detail": "email.mime.text",
+        "documentation": {}
+    },
+    {
+        "label": "dbconnection",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def dbconnection():\n    con = mq.connect(host='localhost', database='slotbooking',user='root',password='root')\n    return con\n@app.route('/')\ndef loginpage():\n    return render_template('login.html', title='Login')\n@app.route('/aboutpage')\ndef aboutpage():\n    return render_template('about.html', title='Loaboutgin')\n@app.route('/registerpage')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "loginpage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def loginpage():\n    return render_template('login.html', title='Login')\n@app.route('/aboutpage')\ndef aboutpage():\n    return render_template('about.html', title='Loaboutgin')\n@app.route('/registerpage')\ndef registerpage():\n    return render_template('register.html', title='register')\n@app.route('/addsubadminpage')\ndef addsubadminpage():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "aboutpage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def aboutpage():\n    return render_template('about.html', title='Loaboutgin')\n@app.route('/registerpage')\ndef registerpage():\n    return render_template('register.html', title='register')\n@app.route('/addsubadminpage')\ndef addsubadminpage():\n    return render_template('addsubadmin.html', title='subadmin')\n@app.route('/adminhomepage')\ndef adminhomepage():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "registerpage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def registerpage():\n    return render_template('register.html', title='register')\n@app.route('/addsubadminpage')\ndef addsubadminpage():\n    return render_template('addsubadmin.html', title='subadmin')\n@app.route('/adminhomepage')\ndef adminhomepage():\n    return render_template('adminhome.html', title='admin home')\n@app.route('/subadminprofile')\ndef subadminprofile():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "addsubadminpage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def addsubadminpage():\n    return render_template('addsubadmin.html', title='subadmin')\n@app.route('/adminhomepage')\ndef adminhomepage():\n    return render_template('adminhome.html', title='admin home')\n@app.route('/subadminprofile')\ndef subadminprofile():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from subadmin where id={}\".format(int(session['said'])))",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "adminhomepage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def adminhomepage():\n    return render_template('adminhome.html', title='admin home')\n@app.route('/subadminprofile')\ndef subadminprofile():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from subadmin where id={}\".format(int(session['said'])))\n    res = cursor.fetchall()\n    return render_template('subprofile.html', title='admins',res=res)\n@app.route('/manageadminpage')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "subadminprofile",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def subadminprofile():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from subadmin where id={}\".format(int(session['said'])))\n    res = cursor.fetchall()\n    return render_template('subprofile.html', title='admins',res=res)\n@app.route('/manageadminpage')\ndef manageadminpage():\n    con = dbconnection()\n    cursor = con.cursor()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "manageadminpage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def manageadminpage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from subadmin\")\n    res = cursor.fetchall()\n    if res==[]:\n        message = Markup(\"<h3>Failed! No Data Found</h3>\")\n        flash(message)\n        return render_template('manageadmin.html')\n    else:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "bookslotpage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def bookslotpage():\n    id = request.args.get('id')\n    return render_template('bookslot.html', title='bookslot', id = id)\n@app.route('/viewsbookingspage')\ndef viewsbookingspage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"\"\"\n    SELECT * \n    FROM bookings ",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "viewsbookingspage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def viewsbookingspage():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"\"\"\n    SELECT * \n    FROM bookings \n    LEFT JOIN user ON bookings.uid = user.id left join events on bookings.evid=events.id\n    ORDER BY \n      CASE bookings.status\n        WHEN 'Pending' THEN 1",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "viewsbookingspagesadmin",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def viewsbookingspagesadmin():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from bookings left join user on bookings.uid=user.id\")\n    res = cursor.fetchall()\n    if res==[]:\n        message = Markup(\"<h3>Failed! No Data Found</h3>\")\n        flash(message)\n        return render_template('bookingsforsub.html')\n    else:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "mybookings",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def mybookings():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from bookings left join events on bookings.evid=events.id where bookings.uid={}\".format(int(session['uid'])))\n    res = cursor.fetchall()\n    if res==[]:\n        message = Markup(\"<h3>Failed! No Data Found</h3>\")\n        flash(message)\n        return render_template('viewmybookings.html')\n    else:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def register():\n    if request.method == 'POST':\n        name = request.form['name']\n        regno = request.form['regno']\n        phone = request.form['phone']\n        email = request.form['email']\n        password = request.form['password']\n        con = dbconnection()\n        cursor = con.cursor()\n        cursor.execute(\"select * from user where email='{}' or regno='{}' or phone='{}'\".format(email,regno,phone))",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "userdashboard",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def userdashboard():\n    return render_template('userdashboard.html', title='admin home')\n@app.route('/login', methods=['GET', 'POST'])\ndef login():\n    if request.method == 'POST':\n        email = request.form['email']\n        password = request.form['password']\n        ltype = request.form['ltype']\n        con = dbconnection()\n        cursor = con.cursor()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def login():\n    if request.method == 'POST':\n        email = request.form['email']\n        password = request.form['password']\n        ltype = request.form['ltype']\n        con = dbconnection()\n        cursor = con.cursor()\n        if ltype=='admin':\n            cursor.execute(\"select * from admin where email='{}' and password='{}'\".format(email,password))\n            res = cursor.fetchall()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "book",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def book():\n    id = request.form['id']\n    date = request.form['date']\n    gender = request.form['gender']\n    comitee = request.form['comitee']\n    uid = session['uid']\n    status = \"Pending\"\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from bookings where uid={} and bdate='{}' and evid={}\".format(int(uid),date,int(id)))",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "accept",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def accept():\n    id  = request.args.get(\"id\")\n    evid  = request.args.get(\"evid\")\n    con = dbconnection()\n    cursor = con.cursor()\n    status = \"Accepted\"\n    cursor.execute(\"update bookings set status='{}' where id={}\".format(status,int(id)))\n    con.commit()\n    cursor.execute(\"UPDATE events SET noslots=CAST(noslots AS UNSIGNED) - 1 WHERE id=%s\", (evid,))\n    con.commit()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "reject",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def reject():\n    id  = request.args.get(\"id\")\n    con = dbconnection()\n    cursor = con.cursor()\n    status = \"Rejected\"\n    cursor.execute(\"update bookings set status='{}' where id={}\".format(status,int(id)))\n    con.commit()\n    cursor.execute(\"select * from bookings inner join user on bookings.uid=user.id where bookings.id={}\".format(int(id)))\n    res = cursor.fetchall()\n    email = res[0][10]",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "accept2",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def accept2():\n    id  = request.args.get(\"id\")\n    con = dbconnection()\n    cursor = con.cursor()\n    status = \"Accepted\"\n    cursor.execute(\"update bookings set status='{}' where id={}\".format(status,int(id)))\n    con.commit()\n    cursor.execute(\"select * from bookings inner join user on bookings.uid=user.id where bookings.id={}\".format(int(id)))\n    res = cursor.fetchall()\n    email = res[0][10]",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "reject2",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def reject2():\n    id  = request.args.get(\"id\")\n    con = dbconnection()\n    cursor = con.cursor()\n    status = \"Rejected\"\n    cursor.execute(\"update bookings set status='{}' where id={}\".format(status,int(id)))\n    con.commit()\n    cursor.execute(\"select * from bookings inner join user on bookings.uid=user.id where bookings.id={}\".format(int(id)))\n    res = cursor.fetchall()\n    email = res[0][10]",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "addsubadmin",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def addsubadmin():\n    if request.method == 'POST':\n        name = request.form['name']\n        regno = request.form['regno']\n        aclass = request.form['class']\n        section = request.form['section']\n        phone = request.form['phone']\n        email = request.form['email']\n        password = request.form['password']\n        con = dbconnection()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "remove",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def remove():\n    id  = request.args.get(\"id\")\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"delete from subadmin where id={}\".format(int(id)))\n    con.commit()\n    con.close()\n    return redirect(url_for('manageadminpage'))\n@app.route('/cancelslot')\ndef cancelslot():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "cancelslot",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def cancelslot():\n    id  = request.args.get(\"id\")\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"delete from bookings where id={}\".format(int(id)))\n    con.commit()\n    con.close()\n    return redirect(url_for('mybookings'))\n@app.route('/updatesubadmin', methods=['GET', 'POST'])\ndef updatesubadmin():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "updatesubadmin",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def updatesubadmin():\n    id  = request.form['id']\n    name = request.form['name']\n    regno = request.form['regno']\n    aclass = request.form['class']\n    section = request.form['section']\n    phone = request.form['phone']\n    email = request.form['email']\n    password = request.form['password']\n    con = dbconnection()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "addeventpage",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def addeventpage():\n    return render_template('addevent.html', title='bookslot')\n@app.route('/addevent', methods=['GET', 'POST'])\ndef addevent():\n    if request.method == 'POST':\n        evname = request.form['evname']\n        evtype = request.form['evtype']\n        noslots = request.form['noslots']\n        con = dbconnection()\n        cursor = con.cursor()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "addevent",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def addevent():\n    if request.method == 'POST':\n        evname = request.form['evname']\n        evtype = request.form['evtype']\n        noslots = request.form['noslots']\n        con = dbconnection()\n        cursor = con.cursor()\n        cursor.execute(\"insert into events(evname,evtype,noslots)values('{}','{}','{}')\".format(\n            evname,evtype,noslots))\n        con.commit()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "aviewevents",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def aviewevents():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from events\")\n    res = cursor.fetchall()\n    if res==[]:\n        message = Markup(\"<h3>Failed! No Data Found</h3>\")\n        flash(message)\n        return render_template('aviewevents.html')\n    else:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "upcomingevents",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def upcomingevents():\n    con = dbconnection()\n    cursor = con.cursor()\n    cursor.execute(\"select * from events where noslots>0\")\n    res = cursor.fetchall()\n    if res==[]:\n        message = Markup(\"<h3>Failed! No Data Found</h3>\")\n        flash(message)\n        return render_template('uviewevents.html')\n    else:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\napp.config['SECRET_KEY'] = 'secret_key'\ndef dbconnection():\n    con = mq.connect(host='localhost', database='slotbooking',user='root',password='root')\n    return con\n@app.route('/')\ndef loginpage():\n    return render_template('login.html', title='Login')\n@app.route('/aboutpage')\ndef aboutpage():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SECRET_KEY']",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config['SECRET_KEY'] = 'secret_key'\ndef dbconnection():\n    con = mq.connect(host='localhost', database='slotbooking',user='root',password='root')\n    return con\n@app.route('/')\ndef loginpage():\n    return render_template('login.html', title='Login')\n@app.route('/aboutpage')\ndef aboutpage():\n    return render_template('about.html', title='Loaboutgin')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "mailsend",
+        "kind": 2,
+        "importPath": "mailing",
+        "description": "mailing",
+        "peekOfCode": "def mailsend(receiver_email, subject, body):\n    try:\n        # Create message object instance\n        message = MIMEMultipart()\n        message[\"From\"] = sender_email\n        message[\"To\"] = receiver_email\n        message[\"Subject\"] = subject\n        # Add body to email\n        message.attach(MIMEText(body, \"plain\"))\n        # Connect to SMTP server",
+        "detail": "mailing",
+        "documentation": {}
+    },
+    {
+        "label": "sender_email",
+        "kind": 5,
+        "importPath": "mailing",
+        "description": "mailing",
+        "peekOfCode": "sender_email = \"suhasbs099@gmail.com\"\npassword = \"your-app-password\"  # Replace with App Password\ndef mailsend(receiver_email, subject, body):\n    try:\n        # Create message object instance\n        message = MIMEMultipart()\n        message[\"From\"] = sender_email\n        message[\"To\"] = receiver_email\n        message[\"Subject\"] = subject\n        # Add body to email",
+        "detail": "mailing",
+        "documentation": {}
+    },
+    {
+        "label": "password",
+        "kind": 5,
+        "importPath": "mailing",
+        "description": "mailing",
+        "peekOfCode": "password = \"your-app-password\"  # Replace with App Password\ndef mailsend(receiver_email, subject, body):\n    try:\n        # Create message object instance\n        message = MIMEMultipart()\n        message[\"From\"] = sender_email\n        message[\"To\"] = receiver_email\n        message[\"Subject\"] = subject\n        # Add body to email\n        message.attach(MIMEText(body, \"plain\"))",
+        "detail": "mailing",
+        "documentation": {}
+    }
+]

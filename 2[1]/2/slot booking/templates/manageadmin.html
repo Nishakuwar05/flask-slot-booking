@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sub Admins</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/table.css">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="../static/togglescript.js"></script>
+   
+  </head>
+  <body>
+     <!-- Menu Button (☰) on the Right Side -->
+   <button class="menu-btn" onclick="toggleDropdown()">&#9776;</button>
+
+   <!-- Dropdown Menu -->
+   <div class="dropdown-menu-custom" id="dropdownMenu">
+    <a href="/addeventpage">Add Event</a>
+       <a href="/addsubadminpage">Add Sub Admin</a>
+       <a href="/viewsbookingspage">Bookings</a>
+       <a href="/">Logout</a>
+      
+   </div>
+<br><br><br><br>
+   <center>
+
+    <h1 style="color: #176d2f;">Admin Profiles</h1>
+      
+    <div class="flashes">
+      {% for message in get_flashed_messages() %}
+      {{ message }}
+      {% endfor %}
+    </div>
+    <div class="table-container">
+     
+      <table id="mytable">
+        
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Registration Number</th>
+            <th>Class</th>
+            <th>Section</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for r in res %}
+          <tr>
+            
+            <td>{{ r[1] }}</td>
+            <td>{{ r[2] }}</td>
+            <td>{{ r[3] }}</td>
+            <td>{{ r[4] }}</td>
+            <td>{{ r[5] }}</td>
+            <td>{{ r[6] }}</td>
+           
+            <td>
+              <a href="remove?id={{r[0]}}" class="linkbtn">Remove</a>
+            </td>
+           
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </center>
+    
+  
+   
+
+   
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subadmin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/togglescript.js"></script>
+    <style>
+   
+        .login-box label {
+    margin-bottom: 1px;
+    font-weight: bold; /* Optional: Makes labels bold for better visibility */
+}
+
+.login-box input,
+.login-box select {
+    margin-bottom: 7px; /* Adds spacing between fields */
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Menu Button (☰) on the Right Side -->
+    <button class="menu-btn" onclick="toggleDropdown()">&#9776;</button>
+
+    <div class="dropdown-menu-custom" id="dropdownMenu">
+        <a href="/viewsbookingspagesadmin">View Bookings</a>
+        
+        <a href="/">Logout</a>
+       
+    </div>
+
+    <!-- Main Content -->
+    <div class="container login-container">
+        <img src="../static/images/image.png" class="logo" alt="Logo">
+        
+        <div class="login-box">
+            <h3 class="text-center">Sub Admin Profile</h3>
+            <br>
+            <div class="flashes">
+                {% for message in get_flashed_messages() %}
+                  {{ message }}
+                {% endfor %}
+              </div>
+           
+            <form action="updatesubadmin" method="Post">
+              {%for r in res%}
+              <input type="hidden" name="id" value="{{r[0]}}">
+                
+                <input type="text" class="form-control" name="name" title="name" placeholder="Enter Name" value="{{r[1]}}" readonly>
+                
+                <input type="text" class="form-control" name="regno" title="register number" placeholder="Enter Register Number" value="{{r[2]}}" readonly>
+
+                <input type="text" class="form-control" name="class" title="class" placeholder="Enter class" value="{{r[3]}}" required>
+                <input type="text" class="form-control" name="section" title="section" placeholder="Enter Section" value="{{r[4]}}" required>
+               
+                <input type="number" class="form-control" name="phone" id="phone" title="phone number" placeholder="Enter Phone Number" value="{{r[5]}}" onchange="validatephone()"  readonly>
+               
+                <input type="email" class="form-control" name="email" title="email id" placeholder="Enter Email Id" value="{{r[6]}}" readonly>
+              
+                <input type="text" class="form-control" name="password" id="password" title="password" placeholder="Enter password" value="{{r[7]}}"  required>
+              
+               
+                {%endfor%}
+                <button class="btn btn-success w-100 mt-3">Update</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validatephone(){
+            var phone = document.getElementById("phone").value;
+            var lenphone = phone.length;
+            if(lenphone!=10){
+                alert("Invalid Phone Number");
+                document.getElementById("phone").value="";
+            }
+        }
+
+        function validatepass(){
+            var password = document.getElementById("password").value;
+            var password2 = document.getElementById("password2").value;
+            if(password !=password2){
+                alert("Passwords did not match");
+                document.getElementById("password2").value="";
+            }
+        }
+    </script>
+
+</body>
+</html>

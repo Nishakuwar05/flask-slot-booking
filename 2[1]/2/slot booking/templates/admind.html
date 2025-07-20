@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - VOMC Slot Booking</title>
+  <link rel="stylesheet" href="static/ad.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <img src="images/image.png" alt="College Logo" class="logo">
+    <h1>VOMC Admin Dashboard</h1>
+  </nav><br><br><br>
+
+  <div class="button-group">
+    <button class="blue-btn"> <a href="aslot.html">Approve Slots</a></button>
+    <button class="green-btn"> <a href="ms.html">Manage Admins</a></button>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container fade-in">
+    
+    <h3>Admin Profiles</h3>
+
+    <div class="profile-section">
+      <!-- Super Admin Card -->
+      <div class="admin-card super-admin">
+        <strong>{{ super_admin['name'] }}</strong>
+        <p>Class: {{ super_admin['class'] }}</p>
+        <p>Reg No: {{ super_admin['reg_no'] }}</p>
+      </div>
+
+      <!-- Display Logged-in Admins -->
+      {% for admin in admins %}
+      <div class="admin-card">
+        <strong>{{ admin['name'] }}</strong>
+        <p>Class: {{ admin['class'] }}</p>
+        <p>Reg No: {{ admin['reg_no'] }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <p class="welcome-text">Hello Admins, welcome to VOMC Slot Booking!</p>
+  </div>
+</body>
+</html>

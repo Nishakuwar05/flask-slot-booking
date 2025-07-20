@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Slot - VOMC</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/style.css"/>
+  <script src="../static/togglescript.js"></script>
+</head>
+<body>
+   <!-- Menu Button (☰) on the Right Side -->
+   <button class="menu-btn" onclick="toggleDropdown()">&#9776;</button>
+
+   <!-- Dropdown Menu -->
+   <div class="dropdown-menu-custom" id="dropdownMenu">
+    <a href="/userdashboard">Dashboard</a>
+       <a href="/mybookings">My Slot Bookings</a>
+       <a href="/">Logout</a>
+      
+   </div>
+
+   <div class="container login-container">
+    <img src="../static/images/image.png" class="logo" alt="Logo">
+    
+    <div class="login-box">
+        <h3 class="text-center">SBRR VOMC BOOKING</h3>
+        <div class="flashes">
+          {% for message in get_flashed_messages() %}
+            {{ message }}
+          {% endfor %}
+        </div>
+       
+        <form action="book" method="Post">
+        <input type="hidden" name="id" value="{{id}}">
+           
+            <label>Date</label>
+            <input type="date" class="form-control" name="date" id="dateInput" required>
+
+           
+            <label>Male</label>
+            <input type="radio"  name="gender"  value="Male">
+            <label>Female</label>
+            <input type="radio" name="gender"  value="Female"><br>
+            
+            <input type="text" class="form-control" name="comitee" placeholder="Enter comitee">
+            <button class="btn btn-success w-100 mt-3">Book Slot</button>
+        </form>
+    </div>
+</div>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+        document.getElementById("dateInput").setAttribute("min", today); // Set min attribute
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile - VOMC</title>
+  <link rel="stylesheet" href="static/u.css" />
+</head>
+<body>
+  <div class="container fade-in">
+    <h2>Your Profile</h2>
+    
+    <!-- Non-editable Name and Email -->
+    <label>Name:</label>
+    <input type="text" id="name" value="John Doe" disabled />
+    
+    <label>Email:</label>
+    <input type="email" id="email" value="john.doe@example.com" disabled />
+
+    <!-- Editable Class and Section -->
+    <label for="class">Class:</label>
+    <input type="text" id="class" placeholder="Enter your class" />
+
+    <label for="section">Section:</label>
+    <input type="text" id="section" placeholder="Enter your section" />
+
+    <!-- Save Button -->
+    <button onclick="saveProfile()" class="glow-button">Save Changes</button>
+    <p id="notification"></p>
+  </div>
+
+  <script src="static/profile.js"></script>
+</body>
+</html>

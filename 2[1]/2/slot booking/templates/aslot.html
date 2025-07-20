@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Approve Slots - VOMC</title>
+  <link rel="stylesheet" href="static/u1.css" />
+</head>
+<body>
+ 
+    <h1>Approve Slot Requests</h1>
+ 
+
+  <div class="container">
+    <h3>Pending Slot Bookings</h3>
+
+    <!-- Display Flash Messages -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash-message">
+          {% for message in messages %}
+            <p>{{ message }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <!-- Display Slot Requests in Table -->
+    {% if bookings %}
+      <table>
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Class</th>
+            <th>Section</th>
+            <th>Gender</th>
+            <th>Booking Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for booking in bookings %}
+          <tr>
+            <td>{{ booking.user_name }}</td>
+            <td>{{ booking.user_email }}</td>
+            <td>{{ booking.class }}</td>
+            <td>{{ booking.section }}</td>
+            <td>{{ booking.gender }}</td>
+            <td>{{ booking.booking_date }}</td>
+            <td>
+              <form method="POST" action="/update-slot">
+                <input type="hidden" name="booking_id" value="{{ booking.id }}">
+                <button type="submit" name="action" value="Accepted" class="accept-btn">Accept</button>
+                <button type="submit" name="action" value="Rejected" class="reject-btn">Reject</button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No pending slot requests.</p>
+    {% endif %}
+  </div>
+</body>
+</html>

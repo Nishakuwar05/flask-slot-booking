@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard - VOMC</title>
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+  <script src="../static/togglescript.js"></script>
+  <style>
+    .carousel {
+      position: relative;
+      width: 60%;
+      overflow: hidden;
+      margin: auto;
+    }
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel img {
+      width: 100%;
+      height: 500px;
+    }
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .prev { left: 0; }
+    .next { right: 0; }
+  </style>
+</head>
+<body>
+  <button class="menu-btn" onclick="toggleDropdown()">&#9776;</button>
+
+  <div class="dropdown-menu-custom" id="dropdownMenu">
+    <a href="/mybookings">My Slot Bookings</a>
+    <a href="/">Logout</a>
+  </div>
+
+  <center>
+    <div class="welcome">
+      <h1>Welcome to VOMC User Dashboard</h1>
+    </div>
+    <div class="carousel">
+      <div class="carousel-images" id="carouselImages">
+        <img src="../static/images/1.jpg" alt="Image 1">
+        <img src="../static/images/2.jpg" alt="Image 2">
+        <img src="../static/images/3.jpg" alt="Image 3">
+        <img src="../static/images/4.jpg" alt="Image 4">
+        <img src="../static/images/5.jpg" alt="Image 5">
+        <img src="../static/images/6.jpg" alt="Image 6">
+      </div>
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+  <br><br>
+  <a href="upcomingevents" class="linkbtn">UPCOMING EVENTS</a>
+</center>
+  <script>
+    let index = 0;
+    function showSlide(i) {
+      const slides = document.getElementById("carouselImages");
+      const totalSlides = slides.children.length;
+      index = (i + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+    function prevSlide() { showSlide(index - 1); }
+    function nextSlide() { showSlide(index + 1); }
+    setInterval(() => nextSlide(), 3000);
+  </script>
+</body>
+</html>
